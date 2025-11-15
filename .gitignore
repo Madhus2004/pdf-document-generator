@@ -1,0 +1,90 @@
+# -------------------------------
+# Python
+# -------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+env/
+.myenv/
+*.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Byte-compiled / cache
+.cache/
+*.pickle
+*.pkl
+
+# -------------------------------
+# PDF / OCR / Temp Files
+# -------------------------------
+output/
+temp/
+tmp/
+*.ppm
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.txt
+
+# pdf2image temp folders
+pdf_images/
+pdf_pages/
+
+# OCR intermediate
+ocr_output/
+
+# Vector index artifacts
+*.faiss
+*.npy
+*.npz
+
+# HuggingFace and SentenceTransformer cache
+~/.cache/
+models/
+transformers_cache/
+sentence_transformers/
+
+# -------------------------------
+# IDE / Editor
+# -------------------------------
+.vscode/
+.idea/
+*.swp
+
+# JetBrains
+*.iml
+out/
+
+# -------------------------------
+# OS files
+# -------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# Environment / Secrets
+# -------------------------------
+.env
+*.secret
+*.key
+config.json
+
+# ollama downloaded binaries
+ollama/
+
+# -------------------------------
+# Build
+# -------------------------------
+dist/
+build/
