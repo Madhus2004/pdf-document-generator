@@ -7,6 +7,12 @@ __pycache__/
 *.pyd
 *.so
 
+*.faiss
+*.index
+*.pkl
+
+*.pdf
+
 # Virtual environments
 venv/
 env/
