@@ -26,7 +26,7 @@ app.secret_key = "change-me-to-a-secret"  # for flash messages
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # ---------- Embedding model ----------
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2") #all-MiniLM-L6-v2 produce 384 dimensions
 EMBED_DIM = model.get_sentence_embedding_dimension()
 
 # ---------- Load or create FAISS index and metadata ----------

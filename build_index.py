@@ -4,6 +4,20 @@ import os
 import pdfplumber
 import numpy as np
 
+
+# --- Optional: Save embeddings for offline analysis (DBSCAN, UMAP, etc.) ---
+def append_embeddings(embeddings, path="data/meta/embeddings.npy"):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    if os.path.exists(path):
+        old = np.load(path)
+        combined = np.vstack([old, embeddings])
+    else:
+        combined = embeddings
+
+    np.save(path, combined)
+
+
 # --- Text extraction ---
 def extract_text(pdf_path):
     pages = []
@@ -66,6 +80,7 @@ def index_pdf(
         return next_id  # nothing to add
 
     embeddings = embed_chunks(model, chunks, batch_size=embed_batch_size)
+    append_embeddings(embeddings)
     n = embeddings.shape[0]
 
     # prepare ids
