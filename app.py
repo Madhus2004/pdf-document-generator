@@ -102,6 +102,7 @@ QUESTION:
 {question}
 
 ANSWER:
+Answer in clear, structured format.
 """
     return ask_mistral(prompt), retrieved
 
